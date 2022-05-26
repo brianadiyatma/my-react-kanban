@@ -3,11 +3,11 @@ import React from "react";
 import img from "../../public/images/cover-01.png";
 console.log(img);
 
-const CoverImage = () => {
+const CoverImage = (props) => {
   return (
     <>
       <Image
-        src={img}
+        src={props.cover}
         width={350}
         height={150}
         style={{

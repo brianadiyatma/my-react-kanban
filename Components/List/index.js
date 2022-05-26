@@ -8,19 +8,20 @@ const Container = styled.div`
   width: 350px;
 `;
 
-const List = () => {
+const List = (props) => {
   return (
     <Container>
-      <Header />
+      <Header
+        title={props.title}
+        description={props.description}
+        cover={props.cover}
+      />
       <Separator />
-      <Card>
-        There are many variations of passages of Lorem Ipsum available, but the
-        majority have suffered alteration in some form, by injected humour,
-      </Card>
-      <Card>
-        There are many variations of passages of Lorem Ipsum available, but the
-        majority have suffered alteration in some form, by injected humour,
-      </Card>
+      {props.cards.map((item, i) => (
+        <Card key={i} title={item.title} avatar={item.avatar}>
+          {item.content}
+        </Card>
+      ))}
     </Container>
   );
 };

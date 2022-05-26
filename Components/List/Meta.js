@@ -14,11 +14,11 @@ const MetaContent = styled.p`
   color: #5e5e7a;
 `;
 
-const Meta = () => {
+const Meta = (props) => {
   return (
     <>
-      <MetaTitle>Not Started</MetaTitle>
-      <MetaContent>Way To Town of Colors</MetaContent>
+      <MetaTitle>{props.title}</MetaTitle>
+      <MetaContent>{props.description}</MetaContent>
     </>
   );
 };

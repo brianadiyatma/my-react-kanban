@@ -3,6 +3,7 @@ import React from "react";
 import Avatar from "./Avatar";
 import Header from "./Header";
 import TagList from "./TagList";
+import ReactMarkdown from "react-markdown";
 
 const StyledCard = styled.div`
   padding: 0.5rem;
@@ -16,14 +17,14 @@ const CardContent = styled.p`
   font-size: 0.8rem;
   color: #5e5e7a;
 `;
-const Card = ({ children }) => {
+const Card = (props) => {
   return (
     <StyledCard>
       <div style={{ margin: 10 }}>
-        <Header />
-        <CardContent>{children}</CardContent>
+        <Header title={props.title} />
+        <ReactMarkdown children={props.children} />
         <TagList />
-        <Avatar />
+        <Avatar avatar={props.avatar} />
       </div>
     </StyledCard>
   );

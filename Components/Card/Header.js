@@ -23,10 +23,10 @@ const LabelContent = styled.div`
   color: #f56c6c;
 `;
 
-const Header = () => {
+const Header = (props) => {
   return (
     <ContainerHeader>
-      <HeaderContent>Not Started</HeaderContent>
+      <HeaderContent>{props.title}</HeaderContent>
       <LabelContainer>
         <LabelContent>Expire on 24th jun</LabelContent>
       </LabelContainer>

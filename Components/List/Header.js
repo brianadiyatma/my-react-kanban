@@ -3,7 +3,7 @@ import CoverImage from "./CoverImage";
 import Meta from "./Meta";
 import styled from "@emotion/styled";
 
-const Header = () => {
+const Header = (props) => {
   const CardHeader = styled.div`
     padding: 0.5rem;
     background-color: white;
@@ -13,8 +13,8 @@ const Header = () => {
   `;
   return (
     <CardHeader>
-      <CoverImage />
-      <Meta />
+      <CoverImage cover={props.cover} />
+      <Meta title={props.title} description={props.description} />
     </CardHeader>
   );
 };

@@ -9,10 +9,10 @@ const RoundAvatar = styled.div`
   border-radius: 50%;
 `;
 
-const Avatar = () => {
+const Avatar = (props) => {
   return (
     <Image
-      src={img}
+      src={props.avatar === null ? "/images/avatar-default.png" : props.avatar}
       width={40}
       height={40}
       style={{ borderRadius: "50%" }}
