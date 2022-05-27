@@ -18,7 +18,7 @@ const List = (props) => {
       />
       <Separator />
       {props.cards.map((item, i) => (
-        <Card key={i} title={item.title} avatar={item.avatar}>
+        <Card key={i} title={item.title} avatar={item.avatar} tags={item.tags}>
           {item.content}
         </Card>
       ))}

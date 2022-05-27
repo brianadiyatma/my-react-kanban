@@ -23,7 +23,7 @@ const Card = (props) => {
       <div style={{ margin: 10 }}>
         <Header title={props.title} />
         <ReactMarkdown children={props.children} />
-        <TagList />
+        <TagList tags={props.tags} />
         <Avatar avatar={props.avatar} />
       </div>
     </StyledCard>
